@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Index</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -11,7 +12,7 @@
   <body>
     <header class="main-header">
       <div class="layout-center">
-        <div class="top-row">
+        <div class="top-row clearfix">
           <div class="left-column">
             <span class="temperature">20<sup>0</sup>C</span>
             <span class="address">Baker street, New York</span>
@@ -29,7 +30,6 @@
            <a href="#" class="menu-item">Home</a>
            <a href="#" class="menu-item">Room</a>
            <a href="#" class="menu-item">Reservation</a>
-           <a href="#" class="menu-item"></a>
            <a href="#" class="menu-item">Pool</a>
            <a href="#" class="menu-item">Restaurant</a>
            <a href="#" class="menu-item">Spa</a>
@@ -37,15 +37,142 @@
     </header>
     <main class="main-content">
       <section class="intro">
-        <div class="slider"></div>
-        <div class="booking"></div>
+        <h1 class="intro-title">Early booking bonus <br>
+          Save up to 50%
+        </h1>
+        <a href="#" class="btn btn-intro">Explore</a>
+        <div class="layout-center">
+          <div class="booking">
+            <form action="/echo" class="booking-form">
+              <input class="booking-field" type="text" name="arrive" id="arrive-field" placeholder="Arrival date">
+              <input class="booking-field" type="text" name="departure" id="departure-field" placeholder="Departure date">
+              <select class="booking-field" name="room" id="room-field">
+                <option value="#">Room</option>
+                <option value="luxury">Luxury Room</option>
+                <option value="family">Family Room</option>
+                <option value="family">Couple Room</option>
+                <option value="family">Standard Room</option>
+              </select>
+              <select class="booking-field" name="guest" id="guest-field">
+                <option value="#">Guest</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+              <input class="btn btn-booking" type="submit" value="Book now">
+            </form>
+          </div>
+        </div>
       </section>
-      <section class="accomodation"></section>
-      <section class="about"></section>
-      <section class="best"></section>
-      <section class="gallery"></section>
-      <section class="subscribe"></section>
-      <section class="contacts"></section>
+      <div class="layout-center">
+        <section class="accomodation">
+          <h2 class="section-title">Accomodation</h2>
+          <div class="stars">
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+            <i class="star"></i>
+          </div>
+          <div class="accomodation-types clearfix">
+            <div class="accomodation-type large">
+              <img src="img/luxury-room-bg.jpg" width="668" height="445" alt="Luxury room">
+              <div class="accomodation-type-inner">
+                <h3 class="accomodation-type-title">Luxury Room</h3>
+                <span class="accomodation-type-cost">320$ / day</span>
+                <a href="" class="btn btn-accomodation">Book now</a>
+              </div>
+            </div>
+            <div class="accomodation-type small">
+              <img src="img/family-room-bg.jpg" width="459" height="305" alt="Family room">
+              <div class="accomodation-type-inner">
+                <h3 class="accomodation-type-title">Family Room</h3>
+                <span class="accomodation-type-cost">320$ / day</span>
+                <a href="" class="btn btn-accomodation">Book now</a>
+              </div>
+            </div>
+            <div class="accomodation-type small">
+              <img src="img/couple-room.bg.jpg" alt="Couple room">
+              <div class="accomodation-type-inner">
+                <h3 class="accomodation-type-title">Couple Room</h3>
+                <span class="accomodation-type-cost">320$ / day</span>
+                <a href="" class="btn btn-accomodation">Book now</a>
+              </div>
+            </div>
+            <div class="accomodation-type large">
+              <img src="img/standart-room-bg.jpg" alt="Standard room">
+              <div class="accomodation-type-inner">
+                <h3 class="accomodation-type-title">Standard Room</h3>
+                <span class="accomodation-type-cost">320$ / day</span>
+                <a href="" class="btn btn-accomodation">Book now</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section about clearfix">
+          <div class="section-content">
+            <h2 class="section-title">About us</h2>
+            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga harum nam consequatur, obcaecati a excepturi nostrum aliquid totam, rem adipisci ipsum quaerat blanditiis ducimus non magnam impedit earum mollitia! Aliquid.</p>
+          </div>
+          <div class="section-image">
+            <img src="img/about-image.jpg" width="562" height="372" alt="About image">
+          </div>
+        </section>
+        <section class="section best clearfix">
+          <div class="section-content">
+            <h2 class="section-title">Our best</h2>
+            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga harum nam consequatur, obcaecati a excepturi nostrum aliquid totam, rem adipisci ipsum quaerat blanditiis ducimus non magnam impedit earum mollitia! Aliquid.</p>
+          </div>
+          <div class="section-image">
+            <img src="img/best-image.jpg" width="577" height="395" alt="Best image">
+          </div>
+        </section>
+      </div>
+      <section class="gallery">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+          <div class="gallery-filter">
+            <a href="#">All</a>
+            <a href="#">Room</a>
+            <a href="#">Bathroom</a>
+            <a href="#">Dining</a>
+            <a href="#">Restaurant</a>
+            <a href="#">Spa</a>
+          </div>
+          <div class="gallery-content clearfix">
+            <div class="gallery-content-item"><img src="img/gallery-1.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-2.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-3.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-4.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-5.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-6.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-7.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-8.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-9.jpg" alt=""></div>
+            <div class="gallery-content-item"><img src="img/gallery-10.jpg" alt=""></div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe clearfix">
+        <h2 class="section-title">Get new offers & Promotions</h2>
+        <form class="subscribe-form" action="/echo" method="get">
+          <input class="text-field" type="email" name="email" id="email" placeholder="Email">
+          <input class="btn btn-subscribe" type="submit" value="Subscribe">
+        </form>
+      </section>
+      <section class="contacts clearfix">
+
+        <form class="contacts-form" action="/echo" method="post">
+          <h2 class="section-title">Contact us</h2>
+          <input class="text-field" type="text" name="name" id="name-field" placeholder="Name">
+          <input class="text-field" type="email" name="email" id="name-field" placeholder="Email">
+          <textarea class="text-field" name="details" id="details-field" cols="30" rows="10" placeholder="Details"></textarea>
+          <input class="btn btn-contacts" type="submit" value="Contact us">
+        </form>
+        <div class="map">
+          <img src="img/map.jpg" width="634" height="317" alt="Map">
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
   </body>
